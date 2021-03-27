@@ -2,33 +2,54 @@ import React from 'react';
 
 const SearchPage = (props) => {
   const SearchBar = ({keyword,setKeyword}) => {
-    const BarStyling = {height:"1.5rem" ,width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
+    const BarStyling = {
+      height:"2rem",
+      width:"100%",
+      background:"#F2F1F9",
+      border:"none",
+      padding:"0.5rem",
+      display: "inline-block"};
     return (
       <>
+      <div className="searchBarContainer">
           <input 
           style={BarStyling}
-          placeholder={"Enter address or postal code.."}
+          placeholder={"Enter postal code.."}
           />
-          <select
-          style={{height:"2.5rem" ,width:"4rem",background:"#7FB3E3"}}
-          >
-              <option value="1">1 km</option>
-              <option value="2">2 km</option>
-              <option value="5">5 km</option>
-              <option value="10">10 km</option>
-          </select>
+      </div>
+      <div className="distanceContainer">
+        <select
+            style={{
+              height:"2rem",
+              width:"100%",
+              background:"#7FB3E3",
+              display:"inline-block"}}
+            >
+                <option value="1">1 km</option>
+                <option value="2">2 km</option>
+                <option value="5">5 km</option>
+                <option value="10">10 km</option>
+            </select>
+      </div>
       </>
     );
   }
   return (
     <div
     style={{
-        position: 'absolute', left: '50%', top: '30%',
+        position: 'absolute', left: '50%', top: '40%',
         transform: 'translate(-50%, -50%)'
     }}>
       <h1 className="websiteName">Locuisine</h1>
       <SearchBar/>
-      <p><button className="surpriseButton">Surprise Me!</button></p>
+      <p>
+        <div className="buttonContainer">
+          <button className="button">Search</button>
+        </div>
+        <div className="buttonContainer">
+          <button className="button">Surprise Me!</button>
+        </div>
+      </p>
     </div>
    );
 }
