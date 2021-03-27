@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
+import Autocomplete from './SearchAutocomplete.js';
 
 const SearchPage = (props) => {
   const SearchBar = ({keyword,setKeyword}) => {
@@ -12,11 +13,8 @@ const SearchPage = (props) => {
       display: "inline-block"};
     return (
       <>
-      <div className="searchBarContainer">
-          <input
-          style={BarStyling}
-          placeholder={"Enter postal code..."}
-          />
+      <div>
+        <Autocomplete/>
       </div>
       <div className="distanceContainer">
         <select
