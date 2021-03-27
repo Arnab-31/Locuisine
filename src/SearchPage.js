@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link } from 'react-router-dom';
 
 const SearchPage = (props) => {
   const SearchBar = ({keyword,setKeyword}) => {
@@ -12,7 +13,7 @@ const SearchPage = (props) => {
     return (
       <>
       <div className="searchBarContainer">
-          <input 
+          <input
           style={BarStyling}
           placeholder={"Enter postal code..."}
           />
@@ -45,7 +46,7 @@ const SearchPage = (props) => {
       <SearchBar/>
       <p>
         <div className="buttonContainer">
-          <button className="button">Search</button>
+          <Link to="/search"><button className="button">Search</button></Link>
         </div>
         <div className="buttonContainer">
           <button className="button">Surprise Me!</button>
