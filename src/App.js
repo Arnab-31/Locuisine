@@ -1,6 +1,9 @@
 import React from 'react';
 import './App.css';
 import SearchPage from './SearchPage.js';
+import SecondPage from './components/SecondPage/SecondPage';
+import { Route, Switch } from 'react-router-dom';
+
 function backgroundScheduler_1() {
   setTimeout(() => {
       document.querySelector(".img1").style.opacity = 0;
@@ -48,6 +51,7 @@ function App() {
         <img class="background-image img3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/800px-Egyptian_food_Koshary.jpg" alt=""></img>
       </div>
       <SearchPage />
+      <Route path="/search" component={SecondPage}/>
     </div>
   );
 }
