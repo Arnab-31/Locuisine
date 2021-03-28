@@ -1,18 +1,34 @@
 .VendorBox {
-    background-color: rgb(202, 202, 202);
-    width: 80%;
-    height: 15%;
-    border-radius: 10px;
-    margin: 0 auto;
+  background-color: rgb(222, 222, 222);
+  width: 80%;
+  height: 10%;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
-.para{
-  margin-left: 10px; 
-  margin-top: 25px; 
+.outBox{
+  margin-top: 1vmin; 
+}
+
+.left {
+  height: 5vmin;
+  width: 60%;
+  text-align: left;
+  vertical-align: center;
+  display: inline-block;
+  padding-top: 1vmin;
+  padding-bottom: 1vmin;
+  padding-left: 2em;
+}
+  
+  /* Control the right side */
+.right {
+  height: 5vmin;
   width: 40%;
-}
-
-.distance {
-    margin: 10px;
-    display: inline-block;
+  text-align: right;
+  vertical-align: top;
+  display: inline-block;
+  padding-right: 2em;
+  padding-top: 2vmin;
+  padding-bottom: 2vmin;
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 
-const Map = (props: any) => {
+const Map = (props) => {
     const [center, setCenter] = useState({lat: 43.7315, lng: -79.7624 });
     const [zoom, setZoom] = useState(12);
     return (

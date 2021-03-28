@@ -8,7 +8,7 @@ const VendorList = (props) => (
     <div>
         <Dropdown className={classes.Dropdown}>
             <Dropdown.Toggle variant="success" id="dropdown-basic">
-                Sort By
+                Filter By
             </Dropdown.Toggle>
 
             <Dropdown.Menu>

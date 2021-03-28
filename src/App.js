@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import SearchPage from './SearchPage.js';
-import SecondPage from './components/SecondPage/SecondPage';
+import SecondPage from './components/SecondPage/SecondPage.js';
+import ThirdPage from './components/ThirdPage/ThirdPage.js';
 import { Route, Switch, Link } from 'react-router-dom';
 
 function backgroundScheduler_1() {
@@ -50,8 +51,9 @@ function App() {
         <img class="background-image img2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Food_%2826171249335%29.jpg/800px-Food_%2826171249335%29.jpg" alt=""></img>
         <img class="background-image img3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/800px-Egyptian_food_Koshary.jpg" alt=""></img>
       </div>
-      <SearchPage />
+      <Route path="/home" component={SearchPage}/>
       <Route path="/search" component={SecondPage}/>
+      <Route path="/restaurant" component={ThirdPage}/>
     </div>
   );
 }
