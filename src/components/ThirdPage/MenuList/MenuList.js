@@ -6,12 +6,11 @@ import classes from './MenuList.module.css'
 
 const MenuList = (props) => (
     <div className={classes.menulist}>
-        <p>Specials</p>
         <hr className={classes.line}/>
-    <MenuBox name="Burger" desc="Patty cooked in sizzling hot burning greasy disgusting motor oil." price="$99.99"/>
-    <MenuBox name="Hotdog" desc="Sausage cooked in sizzling hot burning greasy disgusting motor oil." price="$99.99"/>
-    <MenuBox name="French Fries" desc="Fries cooked in sizzling hot burning greasy disgusting motor oil." price="$99.99"/>
-    <MenuBox name="Milkshake" desc="Milk cooked in sizzling hot burning greasy disgusting motor oil." price="$99.99"/>
+    <MenuBox name="Burger" desc="Juicy, big, loaded with toppings of my choice" price="$23.99"/>
+    <MenuBox name="Hotdog" desc=" Topped with shredded lettuce, crispy bacon, bleu cheese crumbles and drizzled with ranch dressing" price="$21.99"/>
+    <MenuBox name="French Fries" desc=" Crunchy exterior and a light, fluffy interior" price="$10.99"/>
+    <MenuBox name="Milkshake" desc=" Cold drink made of milk, a sweet flavouring such as fruit or chocolate, and typically ice cream, whisked until it is frothy" price="$13.99"/>
     </div>
 )
 

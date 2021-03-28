@@ -3,7 +3,13 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 import Geocode from "react-geocode";
 
+
+
+
+
 const Map = (props) => {
+
+
 
     const params = new URLSearchParams(window.location.search)
     var postal = params.get('postal');
@@ -20,13 +26,8 @@ const Map = (props) => {
           defaultZoom={zoom}
         >
           <Marker
-<<<<<<< HEAD
             lat={props.lat}
             lng={props.lng}
-=======
-            lat={lat1}
-            lng={lng1}
->>>>>>> d2b58bbe90810bf8c84c130c023a982896cf69ba
             name="Your Location"
             color="blue"
           />

@@ -88,7 +88,7 @@ class SecondPage extends React.Component {
         
                 </div>
                 <div className={[classes.split, classes.right].join(' ')}>
-                    <VendorList vendors={this.state.vendors} />
+                    <VendorList vendors={this.state.vendors} userlat={this.state.latt} userlng={this.state.longg} />
                 </div>
              </div>
         )

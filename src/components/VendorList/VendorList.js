@@ -23,7 +23,7 @@ const VendorList = (props) => {
         </Dropdown>
         {
             props.vendors.map (e => (
-                <VendorBox name={e.name} time={e.open_now} rating={e.rating} />
+                <VendorBox name={e.name} time={e.open_now} rating={e.rating} lat={e.geometry.location.lat} lng={e.geometry.location.lng} userlat={props.userlat} userlng={props.userlng} />
             ))
         }
     </div>)
