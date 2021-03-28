@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import classes from './App.css';
 import SearchPage from './SearchPage.js';
 import SecondPage from './components/SecondPage/SecondPage';
 import { Route, Switch } from 'react-router-dom';
@@ -44,14 +44,16 @@ backgroundScheduler_1();
 
 function App() {
   return (
-    <div className="App">
-      <div class="background-container">
-        <img class="background-image img1" src="https://c.pxhere.com/photos/59/f7/Bread_Foods_Fries_Lunch_Overhead_Plate_Plates_Potatoes-1618404.jpg!d" alt=""></img>
-        <img class="background-image img2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Food_%2826171249335%29.jpg/800px-Food_%2826171249335%29.jpg" alt=""></img>
-        <img class="background-image img3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/800px-Egyptian_food_Koshary.jpg" alt=""></img>
+    <div className={classes.App}>
+      <div className="background-container">
+        <img className="background-image img1" src="https://c.pxhere.com/photos/59/f7/Bread_Foods_Fries_Lunch_Overhead_Plate_Plates_Potatoes-1618404.jpg!d" alt=""></img>
+        <img className="background-image img2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Food_%2826171249335%29.jpg/800px-Food_%2826171249335%29.jpg" alt=""></img>
+        <img className="background-image img3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Egyptian_food_Koshary.jpg/800px-Egyptian_food_Koshary.jpg" alt=""></img>
       </div>
-      <SearchPage />
-      <Route path="/search" component={SecondPage}/>
+      <Switch>
+        <Route path="/search" component={SecondPage}/>
+        <Route path="/" component={SearchPage}/>
+      </Switch>
     </div>
   );
 }

@@ -4,6 +4,7 @@
     height: 15%;
     border-radius: 10px;
     margin: 0 auto;
+    font-size: 30px;
 }
 
 .para{
@@ -14,5 +15,9 @@
 
 .distance {
     margin: 10px;
-    display: inline-block;
+    float: right;
+}
+
+.container {
+    margin: 10px;
 }

@@ -1,12 +1,22 @@
 import React from 'react';
 import classes from './VendorBox.module.css';
+import { Container, Row, Col} from 'react-bootstrap';
 
 const VendorBox = (props) => (
     <div className={classes.VendorBox}>
-        <p className={classes.para}>{props.name}</p>
-        <p className={classes.para}>{props.time}</p>
-        <p className={classes.distance}>{props.distance}</p>
+        <Container className={classes.container}>
+            <Row>
+                <Col>{props.name}</Col>
+                <Col>{props.distance}</Col>
+            </Row>
+            <Row>
+                <Col>{props.time}</Col>
+                <Col>3 stars</Col>
+            </Row>
+        </Container>
     </div>
 )
+
+
 
 export default VendorBox;
