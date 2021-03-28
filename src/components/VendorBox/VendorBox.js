@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from './VendorBox.module.css';
+import { Container, Row, Col} from 'react-bootstrap';
 
 const VendorBox = (props) => (
     <div className={classes.outBox}>
@@ -14,5 +15,7 @@ const VendorBox = (props) => (
         </div>
     </div>
 )
+
+
 
 export default VendorBox;

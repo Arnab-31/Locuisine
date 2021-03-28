@@ -1,39 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {Link } from 'react-router-dom';
 
-const SearchPage = (props) => {
-  const SearchBar = ({keyword,setKeyword}) => {
-    const BarStyling = {
-      height:"2rem",
-      width:"100%",
-      background:"#F2F1F9",
-      border:"none",
-      padding:"0.5rem",
-      display: "inline-block"};
-    return (
-      <>
-      <div className="searchBarContainer">
-          <input 
-          style={BarStyling}
-          placeholder={"Enter postal code.."}
-          />
-      </div>
-      <div className="distanceContainer">
-        <select
-            style={{
-              height:"2rem",
-              width:"100%",
-              background:"#7FB3E3",
-              display:"inline-block"}}
-            >
-                <option value="1">1 km</option>
-                <option value="2">2 km</option>
-                <option value="5">5 km</option>
-                <option value="10">10 km</option>
-            </select>
-      </div>
-      </>
-    );
+class SearchPage extends React.Component{
+
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      postal: 0
+    }
+
+    this.onInputchange = this.onInputchange.bind(this);
+
   }
+
+
+  onInputchange(e){
+    this.setState({
+      postal: e.target.value
+    });
+  }
+
+  render () {
   return (
     <div
     style={{
@@ -41,10 +30,13 @@ const SearchPage = (props) => {
         transform: 'translate(-50%, -50%)'
     }}>
       <h1 className="websiteName">Locuisine</h1>
-      <SearchBar/>
+      <input type="text" id="postal" placeholder="Enter postal code..." onChange={this.onInputchange}></input>
       <p>
         <div className="buttonContainer">
-          <button className="button">Search</button>
+          <Link to={{
+            pathname: "/search",
+            search: "?postal=" + `${this.state.postal}`,
+          }}> <button className="button">Search</button></Link>
         </div>
         <div className="buttonContainer">
           <button className="button">Surprise Me!</button>
@@ -52,6 +44,7 @@ const SearchPage = (props) => {
       </p>
     </div>
    );
+  }
 }
 
 export default SearchPage

@@ -8,6 +8,12 @@ const Autocomplete = () => (
       selectProps={{
         placeholder: 'Enter postal code...'
       }}
+      onPress={(data, details = null) => {
+        console.log(details);
+        console.log(data);
+        console.log("data.description",data.description.split(','));
+
+      }}
     />
   </div>
 );
