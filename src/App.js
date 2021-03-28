@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './App.css';
 import SearchPage from './SearchPage.js';
 import SecondPage from './components/SecondPage/SecondPage';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Link } from 'react-router-dom';
 
 function backgroundScheduler_1() {
   setTimeout(() => {

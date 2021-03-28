@@ -1,36 +1,48 @@
-import React from 'react';
-import SearchBar from './components/SearchBAr/SearchBar'
+import React, { useState } from 'react';
+import {Link } from 'react-router-dom';
+import Autocomplete from './SearchAutocomplete.js';
 
-class SearchPage extends React.Component {
+class SearchPage extends React.Component{
+ 
+  
+  constructor(props) {
+    super(props);
 
-  state={
-    postalcode: 700281,
+    this.state = {
+      postal: 0
+    }
+
+    this.onInputchange = this.onInputchange.bind(this);
+
+  }
+ 
+
+  onInputchange(e){
+    this.setState({
+      postal: e.target.value
+    });
   }
 
-
-
   render () {
-    var BarStyling = {height:"1.5rem" ,width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
-    var style={
-      position: 'absolute', left: '50%', top: '30%',
-      transform: 'translate(-50%, -50%)'}
-  
-      return (
-          <div>
-          <input className="addre"
-          style={BarStyling} value={this.state.postalcode}
-          placeholder={"Enter address or postal code.."}
-          />
-          <select
-          style={{height:"2.5rem" ,width:"4rem",background:"#7FB3E3"}}
-          >
-              <option value="1">1 km</option>
-              <option value="2">2 km</option>
-              <option value="5">5 km</option>
-              <option value="10">10 km</option>
-          </select>
+  return (
+    <div
+    style={{
+        position: 'absolute', left: '50%', top: '40%',
+        transform: 'translate(-50%, -50%)'
+    }}>
       <h1 className="websiteName">Locuisine</h1>
-      <p><button className="surpriseButton" onClick={() => { document.location.replace(`/search?${document.querySelector('.addre').val}`);}} >Surprise Me!</button></p>
+      <input type="text" id="postal"  onChange={this.onInputchange}></input>
+      <p>
+        <div className="buttonContainer">
+          <Link to={{
+            pathname: "/search",
+            search: "?" + `${this.state.postal}`,
+          }}> <button className="button">Search</button></Link>
+        </div>
+        <div className="buttonContainer">
+          <button className="button">Surprise Me!</button>
+        </div>
+      </p>
     </div>
    );
   }

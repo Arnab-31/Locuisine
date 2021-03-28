@@ -1,45 +1,45 @@
 .App {
   text-align: center;
+  width: 100%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 html, body {
   margin:0;
   height: 100%;
   overflow: hidden;
 }
 
+body {
+  position:relative;
+}
+
 select {
   color: white;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 .websiteName {
   font-size: 50px;
-  padding-bottom: 20%;
+  font-weight: bold;
+  padding-bottom: 5%;
 }
 
-.surpriseButton{
+.button{
   font-size: 16px;
   padding: 4px;
+  display: inline-block;
+}
+.buttonContainer{
+  padding:4px;
+  display: inline-block;
+}
+.searchBarContainer{
+  width: 70%;
+  display: inline-block;
+  padding-bottom: 3%;
+}
+.distanceContainer{
+  width: 30%;
+  display: inline-block;
 }
 
 .header-container {
@@ -57,6 +57,7 @@ select {
 }
 .background-image {
   display:flex;
+  align-content: center;
   justify-content: center;
   overflow: hidden;
   align-items: center;
@@ -68,9 +69,7 @@ select {
 .img1 {
   opacity: 0.5;
   display:flex;
-  justify-content: center;
   overflow: hidden;
-  align-items: center;
   flex-shrink:0;
   min-width: 100%;
   min-height: 100%;
@@ -80,9 +79,7 @@ select {
 .img2 {
   opacity: 0;
   display:flex;
-  justify-content: center;
   overflow: hidden;
-  align-items: center;
   flex-shrink:0;
   min-width: 100%;
   min-height: 100%;
@@ -92,9 +89,7 @@ select {
 .img3 {
   opacity: 0;
   display:flex;
-  justify-content: center;
   overflow: hidden;
-  align-items: center;
   flex-shrink:0;
   min-width: 100%;
   min-height: 100%;

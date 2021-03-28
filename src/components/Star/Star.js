@@ -1,12 +1,12 @@
 import StarRatings from './react-star-ratings';
- 
+
 class Star extends Component {
     changeRating( newRating, name ) {
       this.setState({
         rating: newRating
       });
     }
- 
+
     render() {
       // rating = 2;
       return (
