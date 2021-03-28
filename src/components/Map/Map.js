@@ -3,8 +3,14 @@ import GoogleMapReact from 'google-map-react';
 import Marker from './Marker';
 
 const Map = (props) => {
-    const [center, setCenter] = useState({lat: 43.7315, lng: -79.7624 });
+
+    const params = new URLSearchParams(window.location.search)
+    var postal = params.get('postal');
+
+    //const [center, setCenter] = useState({lat: props.lat, lng: props.lng });
     const [zoom, setZoom] = useState(12);
+
+    var center = { lat: props.lat, lng: props.lng }
     return (
         <div style={{ height: '100vh', width: '100%' }}>
         <GoogleMapReact
@@ -13,47 +19,20 @@ const Map = (props) => {
           defaultZoom={zoom}
         >
           <Marker
-            lat={43.70245044270797}
-            lng={-79.74904281494608}
+            lat={props.lat}
+            lng={props.lng}
             name="Your Location"
             color="blue"
           />
-          <Marker
-            lat={43.726854}
-            lng={-79.815719}
-            name="The Spice Room"
-            color="red"
-          />
-          <Marker
-            lat={43.665983088504944}
-            lng={-79.73179229046802}
-            name="Silver Spoon Dinery"
-            color="red"
-          />
-          <Marker
-            lat={43.757407301897615}
-            lng={-79.82995833115633}
-            name="Mint Leaf Sweets and Restaurant"
-            color="red"
-          />
-          <Marker
-            lat={43.727003917770034}
-            lng={-79.66631743493089}
-            name="King Tandoori Grill"
-            color="red"
-          />
-          <Marker
-            lat={43.638681017140115}
-            lng={-79.72846899674875}
-            name="Avani Asian Indian Bistro"
-            color="red"
-          />
-          <Marker
-            lat={43.68190769481575}
-            lng={-79.80320250483541}
-            name="Rashmi's Bakery"
-            color="red"
-          />
+
+
+            {
+            props.vendors.map (e => (
+                <Marker lat={e.geometry.location.lat} lng={e.geometry.location.lng} name={e.name} color="red" />
+            ))
+            }
+
+        
         </GoogleMapReact>
       </div>
     );

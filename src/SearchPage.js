@@ -36,7 +36,7 @@ class SearchPage extends React.Component{
         <div className="buttonContainer">
           <Link to={{
             pathname: "/search",
-            search: "?" + `${this.state.postal}`,
+            search: "?postal=" + `${this.state.postal}`,
           }}> <button className="button">Search</button></Link>
         </div>
         <div className="buttonContainer">

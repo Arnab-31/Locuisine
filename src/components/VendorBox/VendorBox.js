@@ -7,11 +7,11 @@ const VendorBox = (props) => (
         <Container className={classes.container}>
             <Row>
                 <Col>{props.name}</Col>
-                <Col>{props.distance}</Col>
+                <Col>1.1km</Col>
             </Row>
             <Row>
-                <Col>{props.time}</Col>
-                <Col>3 stars</Col>
+                <Col>Open Now- {props.time ? 'no' : 'yes'}</Col>
+                <Col>{props.rating} Stars</Col>
             </Row>
         </Container>
     </div>
