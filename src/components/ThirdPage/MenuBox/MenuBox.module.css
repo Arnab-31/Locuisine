@@ -1,0 +1,24 @@
+.itemBorder {
+  width: 80%;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding-left: 4vmin;
+  padding-right: 4vmin;
+  font-size: 1.8vmin;
+}
+.left {
+  width: 80%;
+  text-align: left;
+  vertical-align: top;
+  display: inline-block;
+}
+  
+  /* Control the right side */
+.right {
+  width: 20%;
+  text-align: right;
+  vertical-align: top;
+  display: inline-block;
+  padding-top: 1vmin;
+  padding-bottom: 1vmin;
+}

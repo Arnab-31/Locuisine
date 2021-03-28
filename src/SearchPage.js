@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import {Link } from 'react-router-dom';
-import Autocomplete from './SearchAutocomplete.js';
 
 class SearchPage extends React.Component{
- 
-  
+
+
   constructor(props) {
     super(props);
 
@@ -15,7 +14,7 @@ class SearchPage extends React.Component{
     this.onInputchange = this.onInputchange.bind(this);
 
   }
- 
+
 
   onInputchange(e){
     this.setState({
@@ -31,7 +30,7 @@ class SearchPage extends React.Component{
         transform: 'translate(-50%, -50%)'
     }}>
       <h1 className="websiteName">Locuisine</h1>
-      <input type="text" id="postal"  onChange={this.onInputchange}></input>
+      <input type="text" id="postal" placeholder="Enter postal code..." onChange={this.onInputchange}></input>
       <p>
         <div className="buttonContainer">
           <Link to={{
