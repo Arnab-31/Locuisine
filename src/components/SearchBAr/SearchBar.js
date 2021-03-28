@@ -4,7 +4,7 @@ const SearchBar = ({keyword,setKeyword}) => {
     const BarStyling = {height:"1.5rem" ,width:"20rem",background:"#F2F1F9", border:"none", padding:"0.5rem"};
     return (
       <>
-          <input className="addre"
+          <input className="address"
           style={BarStyling}
           placeholder={"Enter address or postal code.."}
           />
