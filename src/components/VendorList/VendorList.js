@@ -24,6 +24,7 @@ const VendorList = (props) => (
         <VendorBox name="King Tandoori Grill" time="8 AM - 6 PM" distance="5.5 km" />
         <VendorBox name="Mint Leaf Sweets and Restaurant" time="9 AM - 9 PM" distance="8.9 km" />
         <VendorBox name="Silver Spoon Dinery" time="1 PM - 12 AM" distance="3.2 km" />
+        <VendorBox name="The Spice Room" time="8 AM - 7:30 PM" distance="6.5 km" />
     </div>
 )
 
